@@ -1,0 +1,156 @@
+body {
+
+    font-family: 'segoe ui', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Centraliza o conteúdo na tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1); /* sombra mais destacada */
+    width: 100%;
+    box-sizing: border-box; /* garante que o padding não aumente a largura total */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+h3 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+/*================================
+Estilização do campo de resultado
+================================*/
+.resultado {
+    display: flex;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* garante que o input e o botão fiquem na mesma linha */
+}
+
+#senhaGerada {
+    flex-grow: 1; /* faz o input ocupar o máximo de espaço possível */
+    padding: 12px 10px;
+    font-size: 1.1em;
+    border: none; /* remove a borda padrão */
+    background-color: #fcfcfc;
+    color: #444;
+    cursor: default; /* remove o cursor de digitação */    
+}
+
+#copiar {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#copiar:hover {
+    background-color: #2980b9;
+}
+
+/*================================
+opções e controles
+================================*/
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* espaço entre os itens */
+    margin: 20px 0; /* margem superior e inferior */
+}
+
+.opcoes label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.opcoes input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.1); /* aumenta o tamanho do checkbox */
+}
+
+#tamanho {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 5px; /* ajusta a margem do input */
+}
+
+/*================================
+botão gerar senha
+================================*/
+#gerar {
+    width: 100%;
+    padding: 15px;
+    background-color: #2ecc71; 
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#gerar:hover {
+    background-color: #27ae60;
+}
+
+#gerar:active {
+    transform: scale(0.99); /* efeito de clique */
+}
+/*================================
+estilos para o validador de força de senha
+================================*/
+
+p {
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+#forcaSenha {
+    /*garante que o span se destque*/
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.forca-vermelha {
+    color: #fff; /* branco para melhor contraste */
+    background-color: #e74c3c; /* vermelho */
+    font-weight: bold;
+}
+
+.forca-amarela {
+    color: #333; /* cinza escuro para melhor contraste */
+    background-color: #f1c40f;
+    font-weight: bold;
+}
+
+.forca-verde {
+    color: #fff;
+    background-color: #27ae60; /* verde */
+    font-weight: bold;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de Senhas Online</title>
+</head>
+<body>
+    <div class="container"> 
+        <h1>PassGen</h1> 
+
+        <h3>Personalize a sua senha</h3> 
+        <div class="resultado"> 
+            <input type="text" id="senhaGerada" readonly>
+            <button id="copiar">Copiar</button>
+        </div>
+
+        <p>Força: <span id="forcaSenha">Fraca</span></p>
+
+        <div class="opcoes">
+            <label for="tamanho">Tamanho da Senha:</label>
+            <input type="number" id="tamanho" min="8" max="16" value="12">
+
+            <label>
+                <input type="checkbox" id="numeros" checked>
+                Incluir Números
+            </label>
+
+            <label>
+                <input type="checkbox" id="maiusculas" checked>
+                Incluir Maiúsculas
+            </label>
+            <label> 
+                <input type="checkbox" id="simbolos">
+                Incluir Símbolos
+            </label>
+        </div>
+        <button id="gerar">Gerar Senha</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
